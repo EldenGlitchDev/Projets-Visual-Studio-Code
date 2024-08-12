@@ -1,0 +1,32 @@
+body{
+    background-color:#7CC6DD;
+}
+
+.backgroundHeader{
+    background-color:#1A657C;
+}
+
+.buttoncolor{
+    background-color: #112159;
+    color:white;
+}
+
+.searchcolor{
+    background-color:#112159;
+}
+
+.form-control::placeholder{
+    color:white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footerColor{
+    background-color: #1A657C;
+}
+
+.logoRS{
+    width: 60px;
+    height: 40px;
+    margin-top: 23px;
+}
