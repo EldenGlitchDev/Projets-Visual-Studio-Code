@@ -1,21 +1,21 @@
-drop database if exists warhammer;
+DROP DATABASE IF EXISTS warhammer;
 
-create database warhammer;
+CREATE DATABASE warhammer;
 
-use warhammer;
+USE warhammer;
 
 
 -- Table factions
 
-create table `faction` (
-`id` int auto_increment primary key,
-`nom` varchar(50) not null,
-`image` varchar(255) not null
+CREATE TABLE `faction` (
+`id` int AUTO_INCREMENT PRIMARY KEY,
+`nom` varchar(50) NOT NULL,
+`image` varchar(255) NOT NULL
 );
 
 -- INSERT INTO factions
 
-insert into faction (id, nom, image) values
+INSERT INTO faction (id, nom, image) VALUES
 ("1","Skavens","Skavens.png"),
 ("2","Compte Vampire","Comte_Vampire.png"),
 ("3","Hauts-Elfes","Hauts-Elfes.png"),
@@ -36,17 +36,17 @@ insert into faction (id, nom, image) values
 
 -- Table unités des factions
 
-create table `unite` (
-`id` int auto_increment primary key,
-`nom` varchar(50) not null,
-`image` varchar(255) not null,
-`description` text not null,
-`categorie` varchar(50) not null,
-`id_faction` int not null references faction(id)
+CREATE TABLE `unite` (
+`id` int AUTO_INCREMENT PRIMARY KEY,
+`nom` varchar(50) NOT NULL,
+`image` varchar(255) NOT NULL,
+`description` text NOT NULL,
+`categorie` varchar(50) NOT NULL,
+`id_faction` int NOT NULL REFERENCES faction(id)
 );
 
 -- INSERT INTO unités
-insert into unite (id, nom, image, description, categorie, id_faction) values
+INSERT INTO unite (id, nom, image, description, categorie, id_faction) VALUES
 
 								-- SKAVENS --
 
@@ -156,23 +156,23 @@ insert into unite (id, nom, image, description, categorie, id_faction) values
 
 
 -- Table des statistiques unités
-create table `statistiques` (
-`id` int auto_increment primary key,
-`nom` varchar(50) not null,
-`image` varchar(255) not null,
-`description` text not null,
-`sante` int not null,
-`commandement` int not null,
-`vitesse` int not null,
-`attaque_melee` int not null,
-`defense_melee` int not null,
-`bonus_charge` int not null,
-`puissance_attaque` int not null,
+CREATE TABLE `statistiques` (
+`id` int AUTO_INCREMENT PRIMARY KEY,
+`nom` varchar(50) NOT NULL,
+`image` varchar(255) NOT NULL,
+`description` text NOT NULL,
+`sante` int NOT NULL,
+`commandement` int NOT NULL,
+`vitesse` int NOT NULL,
+`attaque_melee` int NOT NULL,
+`defense_melee` int NOT NULL,
+`bonus_charge` int NOT NULL,
+`puissance_attaque` int NOT NULL,
 `puissance_tir` int,
 `temps_rechargement` int,
 `munitions` int,
 `portee` int,
-`id_faction` int not null references unite(id)
+`id_faction` int NOT NULL REFERENCES unite(id)
 );
 
 -- INSERT INTO statistiques
