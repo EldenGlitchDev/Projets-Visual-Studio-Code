@@ -107,72 +107,75 @@ INSERT INTO unite (id, nom, image, description, categorie, id_faction) VALUES
 ("47","Warpfire Throwers","Warpfire_Throwers.jpg","","Tireurs","1"),
 ("48","Warplock Jezzails","Warplock_Jezzails.jpg","","Tireurs","1"),
 
+
 									-- COMTE VAMPIRE --
 
-("49","",".jpg","","Bêtes de guerre","2"),
-("50","",".jpg","","Bêtes de guerre","2"),
+("49","Dire Wolves","Dire_Wolves.jpg","","Bêtes de guerre","2"),
+("50","Fell Bats","Fell_Bats.jpg","","Bêtes de guerre","2"),
 
-("51","",".jpg","","Corps à corps","2"),
-("52","",".jpg","","Corps à corps","2"),
-("53","",".jpg","","Corps à corps","2"),
-("54","",".jpg","","Corps à corps","2"),
-("55","",".jpg","","Corps à corps","2"),
-("56","",".jpg","","Corps à corps","2"),
-("57","",".jpg","","Corps à corps","2"),
+("51","Cairn Wraiths","Cairn_Wraiths.jpg","","Corps à corps","2"),
+("52","Crypt Ghouls","Crypt_Ghouls.jpg","","Corps à corps","2"),
+("53","Grave Guard","Grave_Guard.jpg","","Corps à corps","2"),
+("54","Grave Guard (Great Weapons)","Grave_Guard_(Great_Weapons).jpg","","Corps à corps","2"),
+("55","Skeleton Spearmen","Skeleton_Spearmen.jpg","","Corps à corps","2"),
+("56","Skeleton Warriors","Skeleton_Warriors.jpg","","Corps à corps","2"),
+("57","Zombies","Zombies.jpg","","Corps à corps","2"),
 
-("58","",".jpg","","Cavalerie mêlée","2"),
-("59","",".jpg","","Cavalerie mêlée","2"),
-("60","",".jpg","","Cavalerie mêlée","2"),
-("61","",".jpg","","Cavalerie mêlée","2"),
+("58","Black Knights","Black_Knights.jpg","","Cavalerie mêlée","2"),
+("59","Black Knights (Lances & Barding)","Black_Knights_(Lances_&_Barding).jpg","","Cavalerie mêlée","2"),
+("60","Blood Knights","Blood_Knights.jpg","","Cavalerie mêlée","2"),
+("61","Hexwraiths","Hexwraiths.jpg","","Cavalerie mêlée","2"),
 
-("62","",".jpg","","Chariots","2"),
-("63","",".jpg","","Chariots","2"),
-("64","",".jpg","","Chariots","2"),
-("65","",".jpg","","Chariots","2"),
-("66","",".jpg","","Chariots","2"),
+("62","Black Coach","Black_Coach.jpg","","Chariots","2"),
+("63","Corpse Cart","Corpse_Cart.jpg","","Chariots","2"),
+("64","Corpse Cart (Balefire)","Corpse_Cart_(Balefire).jpg","","Chariots","2"),
+("65","Corpse Cart (Unholy Lodestone)","Corpse_Cart_(Unholy_Lodestone).jpg","","Chariots","2"),
+("66","Mortis Engine","Mortis_Engine.jpg","","Chariots","2"),
 
-("67","",".jpg","","Héros","2"),
-("68","",".jpg","","Héros","2"),
-("69","",".jpg","","Héros","2"),
-("70","",".jpg","","Héros","2"),
-("71","",".jpg","","Héros","2"),
+("67","Banshee","Banshee.jpg","","Héros","2"),
+("68","Necromancer","Necromancer.jpg","","Héros","2"),
+("69","Vampire (Death)","Vampire_(Death).jpg","","Héros","2"),
+("70","Vampire (Shadows)","Vampire_(Shadows).jpg","","Héros","2"),
+("71","Wight King","Wight_King.jpg","","Héros","2"),
 
-("72","",".jpg","","Infanteries monstrueuses","2"),
-("73","",".jpg","","Infanteries monstrueuses","2"),
-("74","",".jpg","","Infanteries monstrueuses","2"),
+("72","Crypt Horrors","Crypt_Horrors.jpg","","Infanteries monstrueuses","2"),
+("73","Mournguls","Mournguls.jpg","","Infanteries monstrueuses","2"),
+("74","Vargheists","Vargheists.jpg","","Infanteries monstrueuses","2"),
 
-("75","",".jpg","","Monstres","2"),
-("76","",".jpg","","Monstres","2"),
+("75","Terrorgheist","Terrorgheist.jpg","","Monstres","2"),
+("76","Varghulf","Varghulf.jpg","","Monstres","2"),
 
-("77","",".jpg","","Seigneurs Légendaires","2"),
-("78","",".jpg","","Seigneurs Légendaires","2"),
-("79","",".jpg","","Seigneurs Légendaires","2"),
-("80","",".jpg","","Seigneurs Légendaires","2"),
-("81","",".jpg","","Seigneurs Légendaires","2"),
+("77","Heinrich Kemmler","Heinrich_Kemmler.jpg","","Seigneurs Légendaires","2"),
+("78","Helman Ghorst","Helman_Ghorst.jpg","","Seigneurs Légendaires","2"),
+("79","Isabella von Carstein","Isabella_von_Carstein.jpg","","Seigneurs Légendaires","2"),
+("80","Mannfred von Carstein","Mannfred_von_Carstein.jpg","","Seigneurs Légendaires","2"),
+("81","Vlad von Carstein","Vlad_von_Carstein.jpg","","Seigneurs Légendaires","2"),
 
-("82","",".jpg","","Tireurs","2"),
-("83","",".jpg","","Tireurs","2"),
+("82","Sylvanian Crossbowmen","Sylvanian_Crossbowmen.jpg","","Tireurs","2"),
+("83","Sylvanian Handgunners","Sylvanian_Handgunners.jpg","","Tireurs","2"),
+
+
 
 
 
 -- Table des statistiques unités
-CREATE TABLE `statistiques` (
-`id` int AUTO_INCREMENT PRIMARY KEY,
-`nom` varchar(50) NOT NULL,
-`image` varchar(255) NOT NULL,
-`description` text NOT NULL,
-`sante` int NOT NULL,
-`commandement` int NOT NULL,
-`vitesse` int NOT NULL,
-`attaque_melee` int NOT NULL,
-`defense_melee` int NOT NULL,
-`bonus_charge` int NOT NULL,
-`puissance_attaque` int NOT NULL,
-`puissance_tir` int,
-`temps_rechargement` int,
-`munitions` int,
-`portee` int,
-`id_faction` int NOT NULL REFERENCES unite(id)
-);
+-- CREATE TABLE `statistiques` (
+-- `id` int AUTO_INCREMENT PRIMARY KEY,
+-- `nom` varchar(50) NOT NULL,
+-- `image` varchar(255) NOT NULL,
+-- `description` text NOT NULL,
+-- `sante` int NOT NULL,
+-- `commandement` int NOT NULL,
+-- `vitesse` int NOT NULL,
+-- `attaque_melee` int NOT NULL,
+-- `defense_melee` int NOT NULL,
+-- `bonus_charge` int NOT NULL,
+-- `puissance_attaque` int NOT NULL,
+-- `puissance_tir` int,
+-- `temps_rechargement` int,
+-- `munitions` int,
+-- `portee` int,
+-- `id_faction` int NOT NULL REFERENCES unite(id)
+-- );
 
 -- INSERT INTO statistiques
